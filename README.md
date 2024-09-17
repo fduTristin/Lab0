@@ -91,21 +91,36 @@
 
     ![7](7.png)
 
-  * 运行`git clone xxxx`(将xxxx替换为刚刚获取的SSH)，你会发现文件夹下有本次lab的内容
+  * 运行
+
+  ```shell
+  git clone xxxx
+  # (将xxxx替换为刚刚获取的SSH)
+  # git clone指令用于将远程仓库克隆到本地
+  ```
 
     ![8](8.png)
 
+  你会发现当前目录下有一个文件夹
+    ![10](10.png)
+
 * 修改本地仓库（vscode打开）
   ![9](9.png)
-  * 你只需要成功上传一个文件，可以是任何内容（例如对本课程的期待？）
+  * 你只需要成功上传一个文件，可以是任何内容（例如一个简单的helloworld.c，或是对本课程的期待？）$\text{\textcolor{red}{（但最好不要是.doc/.docx文件）}}$
 
 * 上传！
+  * 你需要先在终端进入克隆下来的文件夹
+    ![11](11.png)
+
   * 在终端运行以下指令：
 
     ```shell
     git add -A
+    # 提交当前文件夹下的所有更改到暂存区
     git commit -m "xxx(可以是你的提交注释)"
+    # 将暂存区的所有更改提交到本地仓库
     git push
+    # 将本地仓库推送到远程
     ```
 
   * 你也可以使用vscode自带的提交功能
@@ -114,3 +129,4 @@
 
 * [github classroom的使用](https://www.bilibili.com/video/BV12L41147r7?vd_source=4c29bc15f944e68c9ed01279da29e70e)
 
+* 更多的git操作可以参考lab文档下的`Git 基本使用`或这个[链接](https://www.fducslg.com/git-and-github/)
