@@ -15,53 +15,52 @@
 * github 配置 **ssh key**
 
   **NOTE:** 由于我们的实验都在虚拟机 linux 环境下进行，所以无需为本地主机配置 ssh key。如果你以后希望将本地的仓库推送到远程，只要在本地的终端进行下面的配置。
-  * 1.打开 wsl
-  * 2.检查是否已经存在 ssh key。终端运行：
-
+  
+  1. 打开 wsl
+  2. 检查是否已经存在 ssh key。终端运行：
+  
     ```shell
     ls ~/.ssh
     # 列出 ~/.ssh 目录下的所有内容，相当于查看 ~/.ssh 目录是否存在
     ```
-
-    如果输出如下：
-
+  
+    如果输出如下， 则跳到第 4 步
+  
     ![3](3.png)
-
-    则跳到第 4 步
-
+  
     若显示 `No such file or directory`，则继续进行第 3 步
-
-  * 3.生成 ssh key。终端运行
-
+  
+  3. 生成 ssh key。终端运行
+  
     ```shell
     ssh-keygen -t rsa -C "xxx@xx.com"
     # 引号以及里面的内容替换为你的邮箱
     # 执行后一直回车使用默认值即可（没必要设置密码）
     ```
-
-  * 4.获取 ssh key 公钥内容（id_rsa.pub）
-
+  
+  4. 获取 ssh key 公钥内容（id_rsa.pub）
+  
     ```shell
     cat ~/.ssh/id_rsa.pub
     # cat 命令用于连接文件并打印到标准输出设备
     ```
-
+  
     如下图所示：
-
+  
     ![4](4.png)
-
+  
     复制该内容（从 ssh-rsa 开始）
   
-  * 5.github 账号上添加公钥
+  5. github 账号上添加公钥
     * 点击进入 settings - SSH and GPG keys
-
+  
     ![5](5.png)
-
+  
     * 点击 "New SSH keys"，将刚刚复制的公钥粘贴，并给它起个名字，例如 wsl-key
-  * 6.验证是否成功
-
-    ![6](6.png)
-
+  6. 验证是否成功
+  
+  ![6](6.png)
+  
 * 进入课堂
 
   * 点击加入 [github classroom](https://classroom.github.com/a/VxWMuuOe)
@@ -83,9 +82,9 @@
     cd ~
     # 进入默认文件夹
     mkdir lab0
-    # 创建名为lab0的文件夹（你也可以在此之前创建一个总的课程文件夹，进入之后创建每个lab的文件夹）
+    # 创建名为 lab0 的文件夹（你也可以在此之前创建一个总的课程文件夹，进入之后创建每个 lab 的文件夹）
     cd lab0
-    # 进入lab0文件夹
+    # 进入 lab0 文件夹
     ```
   
   * 在网页中访问刚刚获取的链接，点击 "Code" 下的 "SSH"，复制
@@ -132,10 +131,24 @@
     * **工作区**是实际操作项目文件的地方，可以在这里编辑、删除或添加文件。当你对文件进行修改后，这些更改首先出现在工作区中。此时，文件处于“未跟踪”或“已修改”的状态，git 并未正式记录这些修改。
     * **缓存区**是一个临时存储区，记录你希望包含在下一个提交（commit）中的更改。也就是说，文件从工作区进入缓存区后，git 会认为这些更改已经准备好被提交。
     * **本地仓库**是你项目的完整历史记录库。每次提交（commit）都会将缓存区的内容永久保存到本地仓库中。提交后，这些修改就会成为项目历史的一部分。
-    * 另外还有远程仓库（如 github）。本地仓库的提交可以推送（push）到远程仓库中，与其他开发者共享。
+    * 另外还有**远程仓库**（如 github）。本地仓库的提交可以推送（push）到远程仓库中，与其他开发者共享。
+
+## 待做清单
+* git 与 github 基础相关：
+  * 在 wsl（或你使用的其他虚拟机）中安转 git
+  * 在 wsl 中配置 ssh key
+  * 创建 github 账号
+  * 为 github 账号添加 wsl 的 ssh key
+
+* github classroom 相关（也是今后 lab 的发布与提交流程）：
+  * 在 github classroom 中接受作业
+  * 将作业内容 clone 至本地（虚拟机）
+  * 修改本地仓库，上传一个任意文件，并推送至远程仓库
+
+* （非必需，但推荐）简单学习一下 git 的常用指令
 
 ## #参考资料
 
 * [github classroom 的使用](https://www.bilibili.com/video/BV12L41147r7?vd_source=4c29bc15f944e68c9ed01279da29e70e)
 
-* 更多的 git 操作可以参考lab文档下的 `Git 基本使用` 或 [这个链接](https://www.fducslg.com/git-and-github/)
+* 更多的 git 操作可以参考 lab 文档下的 `Git 基本使用` 或 [这个链接](https://www.fducslg.com/git-and-github/)
