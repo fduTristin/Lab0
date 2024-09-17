@@ -108,16 +108,16 @@
 
   * 运行
 
-  ```shell
-  git clone xxxx
-  # (将 xxxx 替换为刚刚获取的 SSH)
-  # git clone 指令用于将远程仓库克隆到本地
-  ```
+    ```shell
+    git clone xxxx
+    # (将 xxxx 替换为刚刚获取的 SSH)
+    # git clone 指令用于将远程仓库克隆到本地
+    ```
 
     ![8](pic/8.png)
 
   你会发现当前目录下有一个文件夹
-  
+
     ![10](pic/10.png)
 
 * 修改本地仓库（vscode 打开）
