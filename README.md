@@ -13,6 +13,7 @@
 
 * 你需要注册一个[github](https://github.com/)账号
 * github配置 **ssh key**
+
   **NOTE:** 由于我们的实验都在虚拟机linux环境下进行，所以无需为本地主机配置ssh key。如果你以后希望将本地的仓库推送到远程，只要在本地的终端进行下面的配置。
   * 1.打开wsl
   * 2.检查是否已经存在ssh key。终端运行
@@ -39,8 +40,8 @@
   * 4.获取ssh key 公钥内容(id_rsa.pub)
 
     ```shell
-    cd ~/.ssh
-    cat id_rsa.pub
+    cat ~/.ssh/id_rsa.pub
+    # cat命令用于连接文件并打印到标准输出设备
     ```
 
     如下图所示：
